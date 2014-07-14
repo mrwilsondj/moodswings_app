@@ -53,3 +53,11 @@ gem 'rest_client'
 gem 'json'
 
 gem 'puma'
+
+
+
+group :test, :development do
+
+  gem 'pry-rails'
+
+end
