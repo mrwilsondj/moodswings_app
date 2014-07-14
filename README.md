@@ -1,7 +1,7 @@
 ## MOODSWINGS
 ---
 
-Welcome to  **MOODSWINGS**. Have you ever wondered what kind of mood you were in 
+Welcome to  **MOODSWINGS**. Have you ever wondered what kind of mood you were in
 
 * Registered users will be able to see fellings blha blah blah.
 * IPSUM LOREM **MOODSWINGS** .
@@ -12,7 +12,7 @@ Welcome to  **MOODSWINGS**. Have you ever wondered what kind of mood you were in
 ## RESOURCES
 ---
 
-* **TWITTER API** https://developer.weathersource.com/documentation/resources/
+* **TWITTER API** https://dev.twitter.com/docs/api
 
 * **BOOTSRAP framework** http://foundation.zurb.com/docs/applications.html
 
@@ -46,7 +46,7 @@ Welcome to  **MOODSWINGS**. Have you ever wondered what kind of mood you were in
 
 * Link to source code on GitHub
 
-[GITHUB](https://github.com/slaffont/moodswings) https://github.com/slaffont/moodswings
+[GITHUB](https://github.com/slaffont/moodswings) https://github.com/mrwilsondj/moodswings_app
 
 [TRELLO](https://trello.com/b/vpsIlABA/project-2) https://trello.com/b/vpsIlABA/project-2
 
