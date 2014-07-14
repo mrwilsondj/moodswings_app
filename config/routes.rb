@@ -17,11 +17,16 @@ end
 
 #                 Prefix Verb     URI Pattern                        Controller#Action
 #      map_display_index GET      /map_display/index(.:format)       map_display#index
-#             home_index GET      /home/index(.:format)              home#index
-#                        GET      /map_display/index(.:format)       map_display#index
 #        sessions_create GET      /sessions/create(.:format)         sessions#create
-#                        GET      /home/index(.:format)              home#index
+#             home_index GET      /home/index(.:format)              home#index
 # home_fetch_friend_data GET      /home/fetch_friend_data(.:format)  home#fetch_friend_data
 #                   root GET      /                                  home#index
 #                        GET|POST /auth/:provider/callback(.:format) sessions#create
 #                signout GET|POST /signout(.:format)                 sessions#destroy
+#                 tweets POST     /tweets(.:format)                  tweets#create
+#             new_tweets GET      /tweets/new(.:format)              tweets#new
+#            edit_tweets GET      /tweets/edit(.:format)             tweets#edit
+#                        GET      /tweets(.:format)                  tweets#show
+#                        PATCH    /tweets(.:format)                  tweets#update
+#                        PUT      /tweets(.:format)                  tweets#update
+#                        DELETE   /tweets(.:format)                  tweets#destroy

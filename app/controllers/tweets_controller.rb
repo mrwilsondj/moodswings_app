@@ -1,4 +1,8 @@
 class TweetsController < ApplicationController
+  def index
+    @Tweets = Tweet.all
+  end
+
   def show
     client = Twitter::REST::Client.new do |config|
       # config.consumer_key        = "Rd5s5s82FAiUD1KufnrnQ"
