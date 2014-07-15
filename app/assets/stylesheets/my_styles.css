@@ -2,7 +2,7 @@
       #topLoader {
         width: 256px;
         height: 256px;
-        margin-bottom: 62px;
+        margin-bottom: 72px;
       }
 
       #animateButton {
@@ -13,4 +13,45 @@
 
 input {
   margin-bottom: 10px;
+  width: 257px;
 }
+
+body {
+background: rgb(32,32,32);
+background: -moz-linear-gradient(top, rgb(32,32,32) 40%, rgb(2,50,50) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(40%, rgb(32,32,32)), color-stop(100%, rgb(2,50,50)));
+background: -webkit-linear-gradient(top, rgb(32,32,32) 40%, rgb(2,50,50) 100%);
+background: -o-linear-gradient(top, rgb(32,32,32) 40%, rgb(2,50,50) 100%);
+background: -ms-linear-gradient(top, rgb(32,32,32) 40%, rgb(2,50,50) 100%);
+background: linear-gradient(to bottom, rgb(32,32,32) 40%, rgb(2,50,50) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202020', endColorstr='#023232', GradientType=0 );
+}
+
+h1, li {
+  color: white;
+}
+
+.navbar {
+  background-color: #202020;
+}
+
+.navbar-default .navbar-nav > li > a {
+color: white;
+text-align: right;
+font-size: 16px;
+}
+
+.navbar-default {
+  border-color: #202020;
+}
+
+
+
+blockquote {
+padding: 10.5px 21px;
+margin: 0 0 21px;
+border-left: 2px solid #777777;
+font-family: "News Cycle", helvetica;
+}
+
+
