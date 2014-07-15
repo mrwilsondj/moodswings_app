@@ -20,13 +20,32 @@ class TweetsController < ApplicationController
     location_value = Geocoder.coordinates("#{f.location}")
     friend_model = Friend.save_friend_data(f, location_value, current_user.id)
 
+    pos = 0
+    neg = 0
+    neut = 0
+
     get_tweets(client, params[:username]).each { |tweet|
       unless Tweet.exists?(friend_model.id, tweet[:tweet_text])
         new_tweet = Tweet.create(tweet.merge({ :friend_id => friend_model.id }))
         new_tweet.analysis
+
+        case new_tweet.result
+          when "positive"
+            puts "positive"
+            pos += 1
+          when "negative"
+            puts "negative"
+            neg += 1
+          when "neutral"
+            puts "neutral"
+            neut +=1
+          else
+            puts "this didnt work"
+        end
       end
     }
 
+    binding.pry
     @tweets = friend_model.tweets
   end
 
