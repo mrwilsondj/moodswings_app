@@ -1,0 +1,10 @@
+/*Jquery animate percentage loader*/
+      #topLoader {
+        width: 256px;
+        height: 256px;
+        margin-bottom: 32px;
+      }
+
+      #animateButton {
+        width: 256px;
+      }

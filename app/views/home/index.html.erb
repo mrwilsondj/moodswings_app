@@ -11,6 +11,50 @@
           </div>
         </div>
 
+<!-- jquery animation loader -->
+        <div id="container">
+      <div id="topLoader">
+      </div>
+
+      <button id="animateButton">Animate Loader</button>
+
+       <script>
+        $(function() {
+          var $topLoader = $("#topLoader").percentageLoader({width: 256, height: 256, controllable : true, progress : 0.5, onProgressUpdate : function(val) {
+              $topLoader.setValue(Math.round(val * 100.0));
+            }});
+
+          var topLoaderRunning = false;
+          $("#animateButton").click(function() {
+            if (topLoaderRunning) {
+              return;
+            }
+            topLoaderRunning = true;
+            $topLoader.setProgress(0);
+            $topLoader.setValue('0kb');
+            var kb = 0;
+            var totalKb = 999;
+
+            var animateFunc = function() {
+              kb += 17;
+              $topLoader.setProgress(kb / totalKb);
+              $topLoader.setValue(kb.toString() + 'kb');
+
+              if (kb < totalKb) {
+                setTimeout(animateFunc, 25);
+              } else {
+                topLoaderRunning = false;
+              }
+            }
+
+            setTimeout(animateFunc, 25);
+
+          });
+        });
+      </script>
+    </div>
+
+
         <div class="row">
           <div class="col-lg-12">
             <form method="GET" action="/tweets">
@@ -28,11 +72,13 @@
 
         <!-- Blockquotes -->
 
-        <div class="row">
+<!--         <div class="row">
           <div class="col-lg-6">
             <h2 id="type-blockquotes">FEELINGS!</h2>
           </div>
-        </div>
+        </div> -->
+
+
 
         <!-- <div class="row">
           <div class="col-lg-6">

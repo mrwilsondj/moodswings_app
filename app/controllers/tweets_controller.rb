@@ -45,8 +45,8 @@ class TweetsController < ApplicationController
       end
     }
 
-    binding.pry
-    @tweets = friend_model.tweets
+    # binding.pry
+    # @tweets = friend_model.tweets
   end
 
   # TODO
