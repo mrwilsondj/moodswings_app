@@ -21,7 +21,10 @@ class TweetsController < ApplicationController
     friend_model = Friend.save_friend_data(f, location_value, current_user.id)
 
     get_tweets(client, params[:username]).each { |tweet|
-      Tweet.create(tweet.merge({ :friend_id => friend_model.id })) if not Tweet.exists?(friend_model.id, tweet[:tweet_text])
+      unless Tweet.exists?(friend_model.id, tweet[:tweet_text])
+        new_tweet = Tweet.create(tweet.merge({ :friend_id => friend_model.id }))
+        new_tweet.analysis
+      end
     }
 
     @tweets = friend_model.tweets
