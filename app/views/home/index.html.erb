@@ -35,7 +35,6 @@
                 <ul>
                   <% @tweets.each do |tweet| %>
                     <li>
-                      Screen Name: <%= tweet.friend.screen_name %>
                       Tweeted: <%= tweet.tweet_text %>
                     </li>
                   <% end %>
