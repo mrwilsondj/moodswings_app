@@ -10,8 +10,8 @@ class User < ActiveRecord::Base
       user.avatar = auth["info"]["image"] || ""
       user.oauth_token = auth["credentials"]["token"] || ""
       user.oauth_secret = auth["credentials"]["secret"] || ""
-      user.latitude = user_location.first
-      user.latitude = user_location.second
+      # user.latitude = user_location.first
+      # user.latitude = user_location.second
     end
   end
 end
