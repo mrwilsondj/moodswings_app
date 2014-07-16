@@ -54,7 +54,7 @@ gem 'json'
 
 gem 'puma'
 
-
+gem 'rails_12factor'
 
 group :test, :development do
 
