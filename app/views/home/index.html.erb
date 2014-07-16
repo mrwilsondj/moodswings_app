@@ -25,11 +25,12 @@
             </div>
             <div class="col-lg-4">
               <% if not @positivity_percentage.nil? %>
-                <h2><%= "#{@name}'s" %> Tweets are <%= "#{@positivity_percentage}%" %> POSITIVE.</h2>
-                <h2><%= "#{@name}'s" %> Tweets are <%= "#{100 - @positivity_percentage}%" %> NEGATIVE.</h2>
+                <div id="positive"><h4 class="dr-moodswing">DR. MOODSWINGS says:</h4><h2><%= "#{@name}'s" %> Tweets are</h2><h1><%= "#{@positivity_percentage}%" %></h1><h2> POSITIVE.</h2></div>
+            <!--     <div id="negative"><%= "#{@name}'s" %> Tweets are <%= "#{100 - @positivity_percentage}%" %> NEGATIVE.</div> -->
+                <div id="negative"><h1><%= "#{100 - @positivity_percentage}%" %></h1><h2> are NEGATIVE.</h2></div>
               <% end %>
             </div>
-            <div class="col-lg-4">
+            <div id="tweet-results" class="col-lg-4">
               <% if not @tweets.nil? and @tweets.length > 0 %>
                 <ul>
                   <% @tweets.each do |tweet| %>
@@ -43,6 +44,7 @@
             </div>
           </div>
         </div>
+<!--         icebox map functionality -->
         <div class="row">
           <div class="col-lg-6">
               <h2 class="type-blockquotes"><%= link_to "Fetch and map MOOD tweets", map_display_index_path, :class=>"btn btn-primary" %></h2>
@@ -62,11 +64,10 @@
                 <small>SOPHIE LAFFONT from <cite title="Source Title">WDI LLC</cite></small>
               </blockquote>
             </div>
-      <!--   </div>
-      </div> -->
+
       <script>
         $(function() {
-          var $topLoader = $("#topLoader").percentageLoader({width: 256, height: 256, controllable : true, progress : 0, onProgressUpdate : function(val) {
+          var $topLoader = $("#topLoader").percentageLoader({width: 256, height: 256, controllable : false, progress : 0, onProgressUpdate : function(val) {
               $topLoader.setValue(Math.round(val * 100.0));
             }});
 
