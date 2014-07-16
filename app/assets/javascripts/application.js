@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery_percentageloader
 //= require_tree .
 
 //= require bootstrap-sprockets
