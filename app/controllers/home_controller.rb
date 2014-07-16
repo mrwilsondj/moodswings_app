@@ -2,8 +2,8 @@ class HomeController < ApplicationController
   def index
     if not params[:username].nil?
       client = Twitter::REST::Client.new do |config|
-          config.consumer_key   = ENV['CONSUMER_KEY']
-    config.consumer_key = ENV['CONSUMER_SECRET']
+    #       config.consumer_key   = ENV['CONSUMER_KEY']
+    # config.consumer_key = ENV['CONSUMER_SECRET']
         config.consumer_key        = 'Rd5s5s82FAiUD1KufnrnQ'
         config.consumer_secret     = '6q8LouMcq8qE1aZa5Mn5nONdwpzchrmXOIlqEYl9CU'
         config.access_token        = ENV["TWITTER_ACCESS_TOKEN"]
