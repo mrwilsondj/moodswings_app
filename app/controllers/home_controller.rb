@@ -51,8 +51,8 @@ class HomeController < ApplicationController
 
   def fetch_friend_data
     client = Twitter::REST::Client.new do |config|
-    #   config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
-    #   config.consumer_secret     = ENV["TWITTER_CONSUMER_SECRET"]
+      config.consumer_key        = 'Rd5s5s82FAiUD1KufnrnQ'
+      config.consumer_secret     = '6q8LouMcq8qE1aZa5Mn5nONdwpzchrmXOIlqEYl9CU'
     #   # config.access_token        = "#{current_user.oauth_token}"
     #   # config.access_token_secret = "#{current_user.oauth_secret}"
       config.access_token        = ENV["TWITTER_OAUTH_TOKEN"]
