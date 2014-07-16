@@ -33,6 +33,7 @@ h1, li {
 
 .navbar {
   background-color: #202020;
+  margin-bottom: 10px
 }
 
 .navbar-default .navbar-nav > li > a {
