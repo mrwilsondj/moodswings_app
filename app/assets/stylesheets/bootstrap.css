@@ -802,7 +802,7 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-
+/*
 .container:before,
 .container:after {
   display: table;
@@ -906,7 +906,7 @@ pre code {
 
 .row:after {
   clear: both;
-}
+}*/
 
 .col-xs-1,
 .col-sm-1,
