@@ -10,16 +10,61 @@
             </div>
           </div>
         </div>
-
-      <div id="topLoader"> <!-- jquery animation loader begin -->
-
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <form method="GET" action="/">
+                <% if not @error_message.nil? %>
+                  <%= @error_message %>
+                <% end %>
+                <input type="text" name="username" />
+                <input type="submit" value="ANALYZE a friend" id="animateButton" class="btn btn-primary type-blockquotes">
+              </form>
+              <!-- jquery animation loader begin -->
+              <div id="topLoader"></div>
+            </div>
+            <div class="col-lg-4">
+              <% if not @positivity_percentage.nil? %>
+                <h2><%= "#{@name}'s" %> Tweets are <%= "#{@positivity_percentage}%" %> POSITIVE.</h2>
+                <h2><%= "#{@name}'s" %> Tweets are <%= "#{100 - @positivity_percentage}%" %> NEGATIVE.</h2>
+              <% end %>
+            </div>
+            <div class="col-lg-4">
+              <% if not @tweets.nil? and @tweets.length > 0 %>
+                <ul>
+                  <% @tweets.each do |tweet| %>
+                    <li>
+                      Screen Name: <%= tweet.friend.screen_name %>
+                      Tweeted: <%= tweet.tweet_text %>
+                    </li>
+                  <% end %>
+                </ul>
+              <% end %>
+            </div>
+          </div>
+        </div>
         <div class="row">
-          <div class="col-lg-12">
-            <form method="GET" action="/tweets">
-              <input type="text" name="username" />
-              <input type="submit" value="ANALYZE a friend" id="animateButton" class="btn btn-primary type-blockquotes">
-
-       <script>
+          <div class="col-lg-6">
+              <h2 class="type-blockquotes"><%= link_to "Fetch and map MOOD tweets", map_display_index_path, :class=>"btn btn-primary" %></h2>
+            </div>
+          </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <blockquote>
+                <p>Should our tweets go here and be for fun? Does this makes sense to show tweets like so?</p>
+                <small>John Doe from <cite title="Source Title"> The WDI Corp</cite></small>
+              </blockquote>
+            </div>
+            <div class="col-lg-6">
+              <blockquote>
+                <p>I want to see my moody tweets on a map</p>
+                <small>SOPHIE LAFFONT from <cite title="Source Title">WDI LLC</cite></small>
+              </blockquote>
+            </div>
+      <!--   </div>
+      </div> -->
+      <script>
         $(function() {
           var $topLoader = $("#topLoader").percentageLoader({width: 256, height: 256, controllable : true, progress : 0, onProgressUpdate : function(val) {
               $topLoader.setValue(Math.round(val * 100.0));
@@ -53,43 +98,5 @@
           });
         });
       </script>
-      </div>
 
-
-
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-       <div class="col-lg-6">
-            <h2 class="type-blockquotes"><%= link_to "Fetch and map MOOD tweets", map_display_index_path, :class=>"btn btn-primary" %></h2>
-        </div>
-       </div>
-
-        <!-- Blockquotes -->
-
-<!--         <div class="row">
-          <div class="col-lg-6">
-            <h2 id="type-blockquotes">FEELINGS!</h2>
-          </div>
-        </div> -->
-
-
-
-        <div class="row">
-          <div class="col-lg-6">
-            <blockquote>
-              <p>Should our tweets go here and be for fun? Does this makes sense to show tweets like so?</p>
-              <small>John Doe from <cite title="Source Title"> The WDI Corp</cite></small>
-            </blockquote>
-          </div>
-          <div class="col-lg-6">
-            <blockquote>
-              <p>I want to see my moody tweets on a map</p>
-              <small>SOPHIE LAFFONT from <cite title="Source Title">WDI LLC</cite></small>
-            </blockquote>
-          </div>
-      <!--   </div>
-      </div> -->
 </div>

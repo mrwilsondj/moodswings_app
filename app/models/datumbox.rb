@@ -22,7 +22,7 @@ class Datumbox
 
     begin
       response = request(method_id, opts)
-        response_parsed = JSON(response)
+      response_parsed = JSON(response)
       result = response_parsed["output"]["result"]
       return result
     end

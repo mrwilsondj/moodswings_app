@@ -4970,7 +4970,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-brand {
-  color: #000000;
+  color: #ffffff;
+  letter-spacing: 5px;
 }
 
 .navbar-default .navbar-brand:hover,

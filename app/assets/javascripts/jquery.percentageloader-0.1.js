@@ -1,6 +1,6 @@
 /*
-jquery.percentageloader.js 
- 
+jquery.percentageloader.js
+
 Copyright (c) 2012, Better2Web
 All rights reserved.
 
@@ -270,7 +270,7 @@ see the file license.txt that was included with the plugin bundle.
                 fontSize = cX / 2;
 
                 percentageText.style.top = ((settings.height / 2) - (fontSize / 2)).toString() + 'px';
-                percentageText.style.color = '#80a9c8';
+                percentageText.style.color = '#EB6864';
                 percentageText.style.font = fontSize.toString() + 'px BebasNeueRegular';
                 percentageText.style.textShadow = '0 1px 1px #FFFFFF';
 
@@ -281,7 +281,7 @@ see the file license.txt that was included with the plugin bundle.
 
                 /* Calculate font and placement of small 'value' text */
                 smallSize = cX / 5.5;
-                valueText.style.color = '#80a9c8';
+                valueText.style.color = '#EB6864';
                 valueText.style.font = smallSize.toString() + 'px BebasNeueRegular';
                 valueText.style.height = smallSize.toString() + 'px';
                 valueText.style.textShadow = 'None';

@@ -45,12 +45,18 @@ font-size: 16px;
   border-color: #202020;
 }
 
+.navbar-brand {
+  color: white;
+}
 
+.page-header {
+  border-color: #777777;
+}
 
 blockquote {
 padding: 10.5px 21px;
 margin: 0 0 21px;
-border-left: 2px solid #777777;
+border-left: 1px solid #777777;
 font-family: "News Cycle", helvetica;
 }
 
