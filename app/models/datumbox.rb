@@ -18,14 +18,14 @@ class Datumbox
     begin
       response = request(method_id, opts)
       response_parsed = JSON(response)
-      if response_parsed["output"]["error"]
-        code = response_parsed["output"]["error"]["ErrorCode"]
-        msg = response_parsed["output"]["error"]["ErrorMessage"]
-        raise StandardError.new("Sorry, but DatumBox says #{code}: #{msg}")
-      else
+      # if response_parsed["output"]["error"]
+      #   code = response_parsed["output"]["error"]["ErrorCode"]
+      #   msg = response_parsed["output"]["error"]["ErrorMessage"]
+      #   raise StandardError.new("Sorry, but DatumBox says #{code}: #{msg}")
+      # else
         result = response_parsed["output"]["result"]
         return result
-      end
+
     end
   end
 
