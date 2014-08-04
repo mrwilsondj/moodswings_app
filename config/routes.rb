@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get "map_display/index"
+  # get "map_display/index"
   get "sessions/create"
-  get "home/index"
-  get "home/fetch_friend_data"
+  get "tweets/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -10,13 +9,12 @@ Rails.application.routes.draw do
   root 'home#index'
   match "/auth/:provider/callback" => "sessions#create", via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
-  resource :tweets
+  # resource :tweets
 
 
 end
 
-#                 Prefix Verb     URI Pattern                        Controller#Action
-#      map_display_index GET      /map_display/index(.:format)       map_display#index
+#              Prefix Verb     URI Pattern                        Controller#Action
 #        sessions_create GET      /sessions/create(.:format)         sessions#create
 #             home_index GET      /home/index(.:format)              home#index
 # home_fetch_friend_data GET      /home/fetch_friend_data(.:format)  home#fetch_friend_data
@@ -30,5 +28,3 @@ end
 #                        PATCH    /tweets(.:format)                  tweets#update
 #                        PUT      /tweets(.:format)                  tweets#update
 #                        DELETE   /tweets(.:format)                  tweets#destroy
-
-

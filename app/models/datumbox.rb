@@ -6,7 +6,7 @@ class Datumbox
   API_VERSION = '1.0'
 
   def initialize
-    @api_key = ENV["DATUMBOX_API_KEY"]
+    @api_key = "48d039937441964632355d750ecd7f2e"
   end
 
   def request(method, opts)

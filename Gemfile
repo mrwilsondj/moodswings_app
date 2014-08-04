@@ -13,8 +13,9 @@ gem "font-awesome-rails"
 gem 'omniauth'
 gem 'omniauth-twitter', :github => 'arunagw/omniauth-twitter'
 gem 'twitter', :github => 'sferik/twitter'
-gem 'geocoder'
-gem 'gmaps4rails', :github =>'apneadiving/Google-Maps-for-Rails'
+# gem 'twitter_oauth'
+# gem 'geocoder'
+# gem 'gmaps4rails', :github =>'apneadiving/Google-Maps-for-Rails'
 
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -52,7 +53,7 @@ gem 'rest_client'
 
 gem 'json'
 
-gem 'puma'
+# gem 'puma'
 
 gem 'rails_12factor'
 

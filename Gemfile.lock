@@ -1,10 +1,4 @@
 GIT
-  remote: git://github.com/apneadiving/Google-Maps-for-Rails.git
-  revision: 9388a062594f9ba5d8022f611284b4a7218782e9
-  specs:
-    gmaps4rails (2.1.2)
-
-GIT
   remote: git://github.com/arunagw/omniauth-twitter.git
   revision: e0a65062f995dff390fd37e83986ab0c9266bedb
   specs:
@@ -80,7 +74,6 @@ GEM
       multipart-post (>= 1.2, < 3)
     font-awesome-rails (4.0.3.0)
       railties (>= 3.2, < 5.0)
-    geocoder (1.1.8)
     hashie (3.2.0)
     hike (1.2.3)
     http (0.6.1)
@@ -121,8 +114,6 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
-    puma (2.6.0)
-      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -193,8 +184,6 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   font-awesome-rails
-  geocoder
-  gmaps4rails!
   jbuilder (~> 2.0)
   jquery-rails
   json
@@ -202,7 +191,6 @@ DEPENDENCIES
   omniauth-twitter!
   pg
   pry-rails
-  puma
   rails (= 4.1.1)
   rails_12factor
   rest_client

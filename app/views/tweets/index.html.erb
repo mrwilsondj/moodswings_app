@@ -1,2 +1,146 @@
+<div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand"><%= image_tag 'therapist.png'%>DR. MOODSWINGS</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+
+             <li>Hello, <%= current_user.name %> <%= image_tag "#{current_user.avatar}" %> <%= link_to "Sign Out", signout_path %></li>
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
 
 
+<div class="container gradient-height">
+      <br/>
+      <div class="bs-docs-section">
+        <div class="page-header">
+          <div class="row">
+            <div class="col-lg-4">
+              <h1 id="buttons">MOOD ANALYSIS</h1>
+            </div>
+          </div>
+        </div>
+    </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <form method="GET" action="<%= tweets_index_url %>">
+                <% if not @error_message.nil? %>
+                  <%= @error_message %>
+                <% end %>
+                <input type="text" name="username" placeholder=" type in a twitter name here" />
+                <input type="submit" value="SUBMIT" id="animateButton" class="btn btn-primary type-blockquotes">
+              </form>
+
+              <!-- jquery animation loader begin -->
+              <div id="topLoader"></div>
+            </div>
+              <div class="col-lg-4">
+                <% if not @positivity_percentage.nil? %>
+                  <div id="positive"><h4 class="dr-moodswing">DR. MOODSWINGS says:</h4><h2><%= "#{@name}'s" %> Tweets are</h2><h1><%= "#{@positivity_percentage}%" %></h1><h2> HAPPY!!</h2></div>
+                  <div id="negative"><h1><%= "#{100 - @positivity_percentage}%" %></h1><h2> are SAD.</h2></div>
+                  <%else%>
+<h2> Learn how your friends are feeling.</h2>
+<h4>Dr. Moodswings can perform a thorough mood sentiment analysis of your friends' Tweets. <h4>
+  <h6 class="dummy-copy">He will analyze and then classify the tweets as either happy or sad depending on the context of your friend's twitter feed.</h6>
+  <h6 class="dummy-copy">Just type in a valid Twitter user name and let Dr. Moodswings do all of the work. Once you get the results, you should send them a message or a gift to your friend to let you know that you took the time to check on him or her.</h6>
+                <% end %>
+              </div>
+            <div id="tweet-results" class="col-lg-4">
+              <% if not @tweets.nil? and @tweets.length > 0 %>
+                <ul>  <% @tweets.each do |tweet| %>
+                    <li>  Tweeted: <%= tweet.tweet_text %> </li>
+                      <% end %>
+                </ul>
+                 <%else%>
+<h4 class="clients"> The Dr.'s recent clients:</h4>
+<div class="client-list">
+  <li> Bill Clinton </li>
+  <p class="client-results"> Tweets are 88% Happy, 22% Sad</p>
+  <li> Rihanna </li>
+  <p class="client-results"> Tweets are 74% Happy, 27% Sad</p>
+  <li> The City of New York </li>
+  <p class="client-results"> Tweets are 90% Happy, 10% Sad</p>
+  <li> Front Runners Club </li>
+  <p class="client-results"> Tweets are 94% Happy, 22% Sad</p>
+  <li> Hendricks Gin </li>
+  <p class="client-results"> Tweets are 72% Happy, 38% Sad</p>
+</div>
+
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+<!--         <div class="row">
+          <div class="col-lg-12">
+              <h3> about DR. MOODSWINGS </h3>
+          </div>
+        </div> -->
+
+<!--         <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <blockquote>
+                <p>So many tweets. So many moods.</p>
+                <small>WILSON CHAN from <cite title="Source Title"> The WDI Corp</cite></small>
+              </blockquote>
+            </div>
+            <div class="col-lg-6">
+              <blockquote>
+                <p>I want to know what Dr. Moodswings says...</p>
+                <small>SOPHIE LAFFONT from <cite title="Source Title">WDI LLC</cite></small>
+              </blockquote>
+            </div> -->
+
+            <script>
+              $(function() {
+                var $topLoader = $("#topLoader").percentageLoader({width: 256, height: 256, controllable : false, progress : 0, onProgressUpdate : function(val) {
+                    $topLoader.setValue(Math.round(val * 100.0));
+                  }});
+
+                var topLoaderRunning = false;
+                $("#animateButton").click(function() {
+                  if (topLoaderRunning) {
+                    return;
+                  }
+
+                  topLoaderRunning = true;
+                  $topLoader.setProgress(0);
+                  $topLoader.setValue('0kb');
+                  var kb = 0;
+                  var totalKb = 9000;
+
+                  var animateFunc = function() {
+                    kb += 17;
+                    $topLoader.setProgress(kb / totalKb);
+                    $topLoader.setValue(kb.toString() + 'kb');
+
+                    if (kb < totalKb) {
+                      setTimeout(animateFunc, 25);
+                    } else {
+                      topLoaderRunning = false;
+                    }
+                  }
+
+                  setTimeout(animateFunc, 25);
+
+                });
+              });
+            </script>
+
+        </div>
+      </div>
+</div>

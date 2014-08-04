@@ -9,4 +9,5 @@ class Tweet < ActiveRecord::Base
       self.result = Datumbox.new.TwitterSentimentAnalysis(text: self.tweet_text)
       self.save!
    end
+
 end

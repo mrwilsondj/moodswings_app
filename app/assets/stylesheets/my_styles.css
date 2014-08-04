@@ -1,3 +1,25 @@
+/* landing page styles */
+
+.therapist {
+  height: 800px;
+  top: 100px;
+  left: 75px;
+}
+
+.logo {
+  color: white;
+  letter-spacing: 5px;
+  text-align: right;
+  padding-right: 200px;
+  padding-top: 220px;
+}
+
+.sign-in {
+  text-align: right;
+  padding-right: 210px;
+  list-style-type: none;
+}
+
 /*Jquery animate percentage loader*/
       #topLoader {
         width: 256px;
@@ -27,9 +49,10 @@ background: linear-gradient(to bottom, rgb(32,32,32) 40%, rgb(2,50,50) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202020', endColorstr='#023232', GradientType=0 );
 }
 
-h1, li {
+h1, h2, h3, h4, h5, h6, li {
   color: white;
 }
+
 
 .navbar {
   background-color: #202020;
@@ -103,4 +126,39 @@ font-family: "News Cycle", helvetica;
 #tweet-results > ul > li:nth-child(2n) {
   color: #9DB0BE;
   margin-top: 6px;
+}
+
+.gradient-height {
+  height: 800px;
+}
+
+
+/* specific typography styles */
+
+.clients {
+  margin-top: 35px;
+  margin-left: 40px;
+}
+
+.client-list {
+ margin-left: 65px;
+}
+
+.client-results {
+  padding-left: 14px;
+}
+
+.dummy-copy {
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+h4 {
+    line-height: 30px;
+}
+
+/* prevent hover from sign in */
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: none;
 }
