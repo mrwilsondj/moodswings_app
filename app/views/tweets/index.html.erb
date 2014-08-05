@@ -49,11 +49,11 @@
             </div>
               <div class="col-lg-4">
                 <% if not @positivity_percentage.nil? %>
-                  <div id="positive"><h4 class="dr-moodswing">DR. MOODSWINGS says:</h4><h2><%= "#{@name}'s" %> Tweets are</h2><h1><%= "#{@positivity_percentage}%" %></h1><h2> HAPPY!!</h2></div>
-                  <div id="negative"><h1><%= "#{100 - @positivity_percentage}%" %></h1><h2> are SAD.</h2></div>
+                  <div id="positive"><h4 class="dr-moodswing">DR. MOODSWINGS says:</h4><h2><%= "#{@name}'s" %> Tweets are</h2><h1><%= "#{@positivity_percentage}%" %></h1><h2 class="happy-large"> HAPPY!</h2></div>
+                  <div id="negative"><h1><%= "#{100 - @positivity_percentage}%" %></h1><h2 class="happy-large"> are SAD.</h2></div>
                   <%else%>
 <h2> Learn how your friends are feeling.</h2>
-<h4>Dr. Moodswings can perform a thorough mood sentiment analysis of your friends' Tweets. <h4>
+<h4>Dr. Moodswings can perform a thorough mood sentiment analysis of your friends' Tweets.</h4>
   <h6 class="dummy-copy">He will analyze and then classify the tweets as either happy or sad depending on the context of your friend's twitter feed.</h6>
   <h6 class="dummy-copy">Just type in a valid Twitter user name and let Dr. Moodswings do all of the work. Once you get the results, you should send them a message or a gift to your friend to let you know that you took the time to check on him or her.</h6>
                 <% end %>
@@ -68,15 +68,15 @@
 <h4 class="clients"> The Dr.'s recent clients:</h4>
 <div class="client-list">
   <li> Bill Clinton </li>
-  <p class="client-results"> Tweets are 88% Happy, 22% Sad</p>
+  <p class="client-results"> Tweets are <div class="happy">88% Happy </div><p class="slash">/</p><div class="sad"> 22% Sad</div></p>
   <li> Rihanna </li>
-  <p class="client-results"> Tweets are 74% Happy, 27% Sad</p>
+  <p class="client-results"> Tweets are <div class="happy">74% Happy </div><p class="slash">/</p><div class="sad"> 27% Sad</div></p>
   <li> The City of New York </li>
-  <p class="client-results"> Tweets are 90% Happy, 10% Sad</p>
+  <p class="client-results"> Tweets are <div class="happy">61% Happy </div><p class="slash">/</p><div class="sad"> 39% Sad</div></p>
   <li> Front Runners Club </li>
-  <p class="client-results"> Tweets are 94% Happy, 22% Sad</p>
+  <p class="client-results"> Tweets are <div class="happy">94% Happy </div><p class="slash">/</p><div class="sad"> 06% Sad</div></p>
   <li> Hendricks Gin </li>
-  <p class="client-results"> Tweets are 72% Happy, 38% Sad</p>
+  <p class="client-results"> Tweets are <div class="happy">72% Happy </div><p class="slash">/</p><div class="sad"> 38% Sad</div></p>
 </div>
 
               <% end %>
@@ -90,7 +90,7 @@
           </div>
         </div> -->
 
-<!--         <div class="container">
+        <div class="container">
           <div class="row">
             <div class="col-lg-6">
               <blockquote>
@@ -103,7 +103,7 @@
                 <p>I want to know what Dr. Moodswings says...</p>
                 <small>SOPHIE LAFFONT from <cite title="Source Title">WDI LLC</cite></small>
               </blockquote>
-            </div> -->
+            </div>
 
             <script>
               $(function() {

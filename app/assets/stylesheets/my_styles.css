@@ -20,17 +20,22 @@
   list-style-type: none;
 }
 
-/*Jquery animate percentage loader*/
-      #topLoader {
-        width: 256px;
-        height: 256px;
-        margin-bottom: 72px;
-      }
+.sign-in a {
+  text-decoration: none;
+}
 
-      #animateButton {
-        width: 256px;
-        margin-bottom: 10px;
-      }
+/*Jquery animate percentage loader*/
+
+#topLoader {
+  width: 256px;
+  height: 256px;
+  margin-bottom: 72px;
+}
+
+#animateButton {
+  width: 256px;
+  margin-bottom: 10px;
+}
 
 
 input {
@@ -113,10 +118,20 @@ font-family: "News Cycle", helvetica;
   margin-top: -5px;
 }
 
+.happy-large {
+  font-size: 45px;
+}
+
+.sad-large {
+  font-size: 45px;
+}
+
 /* friend tweet styles */
 
 #tweet-results {
   font-family: "News Cycle";
+  height: 500px;
+  overflow: scroll;
 }
 
 #tweet-results > ul > li:nth-child(1n) {
@@ -145,20 +160,39 @@ font-family: "News Cycle", helvetica;
 }
 
 .client-results {
-  padding-left: 14px;
+  padding-left: 20px;
+  display: inline;
+  color: #B0B0B0;
 }
 
 .dummy-copy {
   line-height: 25px;
   letter-spacing: 1px;
+  color: #B0B0B0;
 }
 
 h4 {
-    line-height: 30px;
+    padding-top: 5px;
+    line-height: 28px;
+    color: #DFEEF8;
 }
 
-/* prevent hover from sign in */
+.happy {
+  color: #B4D6EC;
+  display: inline;
+}
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+.sad {
+  color: #EB6864;
+  display: inline;
+}
+
+.slash {
+  display: inline;
+}
+
+/* prevent hover from sign-in inside nav bar */
+
+li > a:focus {
     background-color: none;
 }

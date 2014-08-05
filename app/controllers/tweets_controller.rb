@@ -49,7 +49,7 @@ class TweetsController < ApplicationController
 
   private
   def get_tweets(client, username)
-    client.user_timeline(username).take(5).collect do |tweet|
+    client.user_timeline(username).take(20).collect do |tweet|
       {:tweet_text => tweet.text,
       :tweet_date => tweet.created_at}
     end

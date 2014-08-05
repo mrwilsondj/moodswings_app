@@ -1,11 +1,10 @@
 ## MOODSWINGS
 ---
 
-Welcome to  **MOODSWINGS**. Have you ever wondered what kind of mood you were in
+Welcome to  **DR. MOODSWINGS**. The Dr. will find out what kind what kind of mood your twitter friends are in using a sentiment analysis tool
 
-* Registered users will be able to see fellings blha blah blah.
-* IPSUM LOREM **MOODSWINGS** .
-* **MOODSWINGS** will store data sentiments.
+* Registered users will be able to register with Twitter.
+* **MOODSWINGS** will store & parse data sentiments and will return results to you.
 
 
 
@@ -14,31 +13,28 @@ Welcome to  **MOODSWINGS**. Have you ever wondered what kind of mood you were in
 
 * **TWITTER API** https://dev.twitter.com/docs/api
 
+* **DATUMBOX API** http://www.datumbox.com/
+
 * **BOOTSRAP framework** http://foundation.zurb.com/docs/applications.html
 
 * **JQUERYui** http://jqueryui.com/
 
 
-
-
 ####TECHNOLOGIES:
 ---
-* RAILS 4
-* HTML5 CANVAS
+* RUBY & RAILS 4
 * JAVASCRIPT / JQUERY
-* BACKBONE
+* APIs / Omni-Auth
 * BOOTSTRAP
-
 
 
 
 ####TEAM MEMBERS:
 ---
 
-
 [SOPHIE LAFFONT](https://github.com/slaffont) https://github.com/slaffont
 
-[WILSON CHAN](https://github.com/Mannymin) https://github.com/mrwilsondj
+[WILSON CHAN](https://github.com/mrwilsondj) https://github.com/mrwilsondj
 
 
 ####HOSTED ON:
@@ -46,11 +42,11 @@ Welcome to  **MOODSWINGS**. Have you ever wondered what kind of mood you were in
 
 * Link to source code on GitHub
 
-[GITHUB](https://github.com/slaffont/moodswings) https://github.com/mrwilsondj/moodswings_app
+[GITHUB](https://github.com/mrwilsondj/drmoodswings) hhttps://github.com/mrwilsondj/drmoodswings
 
-[TRELLO](https://trello.com/b/vpsIlABA/project-2) https://trello.com/b/vpsIlABA/project-2
+* Link to Heroku
 
-[HEROKU](https://moodwsings.herokuapp.com) https://moodswings.herokuapp.com
+[HEROKU](http://warm-everglades-5638.herokuapp.com/) http://warm-everglades-5638.herokuapp.com/
 
 
 
